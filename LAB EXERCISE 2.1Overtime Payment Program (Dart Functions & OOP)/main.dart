@@ -5,7 +5,6 @@ import 'myLib.dart';
 void main() {
   final emp = Employee(
     name: 'Ahmad',
-    id: 101,
     baseSalary: 3000.00,
     overtimeRate: 20.00,
   );
@@ -15,7 +14,7 @@ void main() {
   double? overtimeHours = double.tryParse(input ?? '');
 
   if (overtimeHours == null || overtimeHours < 0) {
-    print('Invalid input. Please enter a non-negative number.');
+    print('Invalid input.');
     return;
   }
 
@@ -23,7 +22,7 @@ void main() {
   double totalSalary = emp.calculateTotalSalary(overtimeHours);
 
   print('');
-  print('Employee: ${emp.name} (ID: ${emp.id})');
+  print('Employee: ${emp.name} ');
   print('Base Salary: ${emp.baseSalary.toStringAsFixed(2)}');
   print('Overtime Hours: $overtimeHours');
   print('Overtime Pay: ${overtimePay.toStringAsFixed(2)}');
