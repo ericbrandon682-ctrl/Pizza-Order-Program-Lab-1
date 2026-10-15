@@ -14,7 +14,7 @@ void main() {
   double? overtimeHours = double.tryParse(input ?? '');
 
   if (overtimeHours == null || overtimeHours < 0) {
-    print('Invalid input.');
+    print('Invalid input. Please enter a valid number.');
     return;
   }
 
